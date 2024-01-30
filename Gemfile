@@ -9,6 +9,8 @@ gem 'jbuilder'
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
+gem 'httparty'
+
 group :development, :test do
   gem 'debug', platforms: %i[ mri windows ]
   gem 'pry'
@@ -20,5 +22,6 @@ group :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 6.0'
   gem 'rails-controller-testing'
+  gem 'webmock'
 end
 
