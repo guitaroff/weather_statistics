@@ -8,6 +8,10 @@ class WeatherRequest
     self.class.get(current_data_path, query: options)
   end
 
+  def historical_data
+    self.class.get(historical_data_path, query: options)
+  end
+
   private
 
   def api_key
@@ -24,5 +28,9 @@ class WeatherRequest
 
   def current_data_path
     "/currentconditions/v1/#{location_key}"
+  end
+
+  def historical_data_path
+    "#{current_data_path}/historical/24"
   end
 end
